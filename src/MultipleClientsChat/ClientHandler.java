@@ -49,7 +49,6 @@ public class ClientHandler implements Runnable{
                 closeEveryThing(socket, bufferedReader, bufferedWriter);
                 break;
             }
-
         }
     }
 
