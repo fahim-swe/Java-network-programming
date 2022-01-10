@@ -37,6 +37,7 @@ public class ClientThread extends Thread{
 
             if(!file.exists())
             {
+                System.out.printf("Status   : Requested file doesn't Exits in Server");
                 byte code = (byte) 0;
                 out.write(code);
 
@@ -60,6 +61,7 @@ public class ClientThread extends Thread{
                     out.flush();
                 }
 
+                System.out.printf("Status   : File Downloaded Successfully");
                 closeConnection();
 
             }
