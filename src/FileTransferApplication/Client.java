@@ -72,8 +72,10 @@ public class Client {
                     outputFile.flush();
                 }
 
+
                 System.out.println();
-                System.out.println("File: " + fileName + " was successfully download in your Pc");
+                System.out.println("File     : " + fileName + " was successfully download in your Pc");
+                System.out.printf( "Location : C:\\Users\\fahim(2018831064)\\Downloads\\JavaLab\\");
 
             }
             else{
