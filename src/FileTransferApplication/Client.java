@@ -52,7 +52,16 @@ public class Client {
             int code = input.read();
             if(code == 1){
                 System.out.println("Found");
-                BufferedOutputStream outputFile = new BufferedOutputStream(new FileOutputStream("/home/fahim/" + fileName));
+
+                // linux pc
+               // BufferedOutputStream outputFile = new BufferedOutputStream(new FileOutputStream("/home/fahim/" + fileName));
+
+                // Windows Pc
+                BufferedOutputStream outputFile = new BufferedOutputStream(new FileOutputStream("C:\\Users\\fahim(2018831064)\\Downloads\\JavaLab\\" + fileName));
+
+
+
+
                 System.out.println(outputFile.toString());
                 // Convert BufferedInputStream to byte array
                 int nRead;
