@@ -12,9 +12,7 @@ public class ClientInfo {
     }
 
     public void info(){
-
         System.out.println("Hostname : " + socket.getInetAddress().getHostName());
-//        System.out.println(socket.getInetAddress().getClass());
         System.out.println("Address  : " + socket.getInetAddress().toString());
     }
 }

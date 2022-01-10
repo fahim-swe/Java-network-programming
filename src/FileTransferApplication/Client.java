@@ -79,7 +79,7 @@ public class Client {
 
             }
             else{
-                System.out.println("File if not present on the computer");
+                System.out.println("File if not present on the Server");
             }
 
         }
