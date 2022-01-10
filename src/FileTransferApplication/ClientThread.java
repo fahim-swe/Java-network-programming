@@ -40,7 +40,7 @@ public class ClientThread extends Thread{
                 System.out.printf("Status   : Requested file doesn't Exits in Server");
                 byte code = (byte) 0;
                 out.write(code);
-
+                out.flush();
             }
             else {
                 // if the file exits send code 1 and send the file
