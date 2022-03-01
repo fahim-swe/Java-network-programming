@@ -1,23 +1,32 @@
 package IO_Stream;
 
-import java.io.OutputStream;
-import java.nio.charset.StandardCharsets;
+
+
+import java.io.*;
 
 public class FileOutputStream {
-    public static void main(String args[]){
-        String data = "This is file Output output stream";
+
+    public static void main(String[] args){
+
+        // Current Directory
+        String userDirectory = System.getProperty("user.dir");
+        System.out.println(userDirectory);
 
         try{
-            OutputStream out = new java.io.FileOutputStream("output.txt");
+            java.io.FileOutputStream fos = new java.io.FileOutputStream(userDirectory + "/src/IO_Stream/text.txt");
 
-            // converts the string into bytes
-            byte[] dataBytes = data.getBytes();
 
-            // Write data to the output stream
-            out.write(dataBytes);
-            System.out.println("Data is written to the file Successfully");
-        }catch (Exception e){
+            String s = "Learn Java Programming File";
 
-        }
+            byte b[] = s.getBytes();
+            fos.write(b);
+
+
+            // Java Programming
+            fos.write(b, 6, s.length()-6); // "Java Programming"
+            fos.close();
+
+        }catch(Exception e){System.out.println(e);}
+
     }
 }
